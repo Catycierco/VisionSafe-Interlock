@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vision Safe Interlock</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.cube-container {
+    width: 300px;
+    height: 300px;
+    margin: 60px auto;
+    perspective: 1000px;
+}
+
+.cube {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg);
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+}
+
+.face {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgba(255,255,255,0.8);
+    overflow: hidden;
+}
+
+.face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.front { transform: translateZ(150px); }
+.back { transform: rotateY(180deg) translateZ(150px); }
+.right { transform: rotateY(90deg) translateZ(150px); }
+.left { transform: rotateY(-90deg) translateZ(150px); }
+.top { transform: rotateX(90deg) translateZ(150px); }
+.bottom { transform: rotateX(-90deg) translateZ(150px); }
+</style>
+
+</head>
+
+<body class="light-mode">
+
+<canvas id="particle-canvas"></canvas>
+
+<header>
+
+<div class="container nav-container">
+
+<div class="logo">
+<span class="logo-icon">👓</span>
+<span class="logo-text">Vision Safe Interlock</span>
+</div>
+
+<nav>
+<ul>
+<li><a href="#home">Início</a></li>
+<li><a href="#sistema">Sistema</a></li>
+<li><a href="#beneficios">Benefícios</a></li>
+<li><a href="#futuro">Evolução</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+</ul>
+</nav>
+
+<button id="theme-toggle">🌙</button>
+
+</div>
+
+</header>
+
+<section id="home" class="hero">
+
+<div class="container">
+
+<h2>Vision Safe Interlock</h2>
+
+<p>
+Sistema inteligente de interbloqueio entre óculos de proteção e máquinas industriais,
+garantindo que o equipamento apenas funciona quando o operador utiliza corretamente o EPI.
+</p>
+
+<div class="cube-container">
+    <div class="cube">
+
+        <div class="face front">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Eletrónica PCB">
+        </div>
+
+        <div class="face back">
+            <img src="https://images.unsplash.com/photo-1553406830-ef2513450d76?auto=format&fit=crop&w=800&q=80" alt="Microcontroladores">
+        </div>
+
+        <div class="face right">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Circuitos eletrónicos">
+        </div>
+
+        <div class="face left">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Engrenagens industriais">
+        </div>
+
+        <div class="face top">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Engenharia mecânica">
+        </div>
+
+        <div class="face bottom">
+            <img src="https://images.unsplash.com/photo-1581092335397-9fa3c3a5b7d3?auto=format&fit=crop&w=800&q=80" alt="Tecnologia engenharia geral">
+        </div>
+
+    </div>
+</div>
+
+<a href="#sistema" class="btn">Conhecer o Projeto</a>
+
+</div>
+
+</section>
+
+<section id="sistema" class="produtos">
+
+<div class="container">
+<h2>Funcionamento do Sistema</h2>
+
+<div class="cards">
+
+<a href="sensor-presenca.html" class="card">
+<div class="card-inner">
+<div class="card-front">
+<h3>Sensor de Presença</h3>
+<p>
+Deteta automaticamente o contacto dos óculos com a face do operador,
+confirmando a utilização correta do equipamento de proteção.
+</p>
+</div>
+</div>
+</a>
+
+<a href="microcontrolador.html" class="card">
+<div class="card-inner">
+<div class="card-front">
+<h3>Microcontrolador</h3>
+<p>
+Processa os sinais recebidos pelo sensor e valida as condições de segurança
+antes de autorizar o funcionamento da máquina.
+</p>
+</div>
+</div>
+</a>
+
+<a href="comunicacao-inteligente.html" class="card">
+<div class="card-inner">
+<div class="card-front">
+<h3>Comunicação Inteligente</h3>
+<p>
+Transmite o estado dos óculos para a unidade recetora através de Bluetooth
+Low Energy ou tecnologia RFID.
+</p>
+</div>
+</div>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="beneficios" class="produtos destaque">
+
+<div class="container">
+
+<h2>Benefícios</h2>
+
+<div class="cards">
+
+<a href="seguranca.html" class="card">
+<div class="card-inner">
+<div class="card-front">
+<h3>Segurança</h3>
+<p>
+Evita lesões oculares provocadas por limalhas,
+fagulhas e partículas metálicas projetadas.
+</p>
+</div>
+</div>
+</a>
+
+<a href="automacao.html" class="card">
+<div class="card-inner">
+<div class="card-front">
+<h3>Automação</h3>
+<p>
+Elimina falhas humanas e garante o cumprimento
+automático das normas de segurança.
+</p>
+</div>
+</div>
+</a>
+
+<a href="fiabilidade.html" class="card">
+<div class="card-inner">
+<div class="card-front">
+<h3>Fiabilidade</h3>
+<p>
+Monitorização permanente do estado dos EPIs
+e comunicação contínua com o equipamento.
+</p>
+</div>
+</div>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="futuro" class="contato">
+
+<div class="container">
+
+<h2>Evoluções Futuras</h2>
+
+<p>
+O Vision Safe Interlock poderá integrar plataformas de Indústria 4.0,
+monitorização em tempo real, registo de utilização dos EPIs,
+carregamento sem fios e sistemas avançados de análise de segurança.
+</p>
+
+<div class="cards">
+
+<a href="iot-industrial.html" class="card">
+<div class="card-inner">
+<div class="card-front">
+<h3>IoT Industrial</h3>
+<p>
+Integração com fábricas inteligentes e sistemas conectados.
+</p>
+</div>
+</div>
+</a>
+
+<a href="app-monitorizacao.html" class="card">
+<div class="card-inner">
+<div class="card-front">
+<h3>App de Monitorização</h3>
+<p>
+Acompanhamento em tempo real do estado dos EPIs.
+</p>
+</div>
+</div>
+</a>
+
+<a href="carregamento-wireless.html" class="card">
+<div class="card-inner">
+<div class="card-front">
+<h3>Carregamento Wireless</h3>
+<p>
+Maior autonomia e facilidade de utilização diária.
+</p>
+</div>
+</div>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contato">
+
+<div class="container">
+
+<h2>Conclusão</h2>
+
+<p>
+O Vision Safe Interlock representa uma solução inovadora para aumentar a segurança
+em operações de rebarbagem e corte industrial. Através da integração entre
+óculos inteligentes, sensores e sistemas de controlo, garante-se que o operador
+está protegido antes da máquina entrar em funcionamento.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<p>
+👓 Vision Safe Interlock © 2026
+<br>
+Segurança Inteligente para Ambientes Industriais
+</p>
+
+</div>
+
+</footer>
+
+<script>
+
+const toggle = document.getElementById('theme-toggle');
+
+toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    document.body.classList.toggle('light-mode');
+
+    toggle.textContent =
+    document.body.classList.contains('dark-mode')
+    ? '☀️'
+    : '🌙';
+});
+
+const canvas = document.getElementById('particle-canvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for(let i=0;i<150;i++){
+    particles.push({
+        x:Math.random()*canvas.width,
+        y:Math.random()*canvas.height,
+        r:Math.random()*2+1,
+        dx:(Math.random()-0.5)*0.5,
+        dy:(Math.random()-0.5)*0.5
+    });
+}
+
+function animate(){
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    for(let p of particles){
+
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+
+        ctx.fillStyle =
+        document.body.classList.contains('dark-mode')
+        ? 'rgba(255,255,255,0.6)'
+        : 'rgba(255,255,255,0.3)';
+
+        ctx.fill();
+
+        p.x += p.dx;
+        p.y += p.dy;
+
+        if(p.x<0 || p.x>canvas.width) p.dx*=-1;
+        if(p.y<0 || p.y>canvas.height) p.dy*=-1;
+    }
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+window.addEventListener('resize',()=>{
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+});
+
+</script>
+
+</body>
+</html>

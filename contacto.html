@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contacto | Vision Safe Interlock</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#e3f2fd,#f5faff);
+    min-height:100vh;
+    color:#222;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+header{
+    text-align:center;
+    padding:40px 0 20px;
+}
+
+header h1{
+    color:#0077b6;
+    font-size:2.5rem;
+}
+
+.produto-container{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:15px;
+    color:#0077b6;
+}
+
+p{
+    text-align:center;
+    margin-bottom:25px;
+    color:#555;
+    line-height:1.6;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:14px;
+    border:2px solid #d9e6f2;
+    border-radius:10px;
+    font-size:16px;
+    transition:0.3s;
+    background:#fafcff;
+}
+
+input:focus,
+textarea:focus{
+    outline:none;
+    border-color:#00bcd4;
+    background:white;
+}
+
+textarea{
+    min-height:140px;
+    resize:vertical;
+}
+
+button{
+    padding:15px;
+    background:linear-gradient(135deg,#00bcd4,#0077b6);
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(0,188,212,0.3);
+}
+
+.btn{
+    display:block;
+    width:250px;
+    margin:30px auto 0;
+    text-align:center;
+    text-decoration:none;
+    padding:14px;
+    border-radius:10px;
+    background:#0077b6;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#005f8f;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    margin-top:40px;
+    color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<h1>Contacto</h1>
+</div>
+</header>
+
+<section>
+
+<div class="container">
+
+<h2>Fala Connosco</h2>
+
+<p>
+Se tens dúvidas ou sugestões sobre o projeto Vision Safe Interlock,
+envia-nos uma mensagem.
+</p>
+
+<section class="produto-page">
+    <div class="produto-container">
+        <h2>Entre em Contato</h2>
+        <p>Preencha o formulário abaixo e envie sua mensagem. Abrirá no seu email padrão.</p>
+
+            <form action="https://formsubmit.co/catarinaqueiroz78@gmail.com" method="POST">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu email" required>
+            <textarea name="mensagem" placeholder="Escreve a tua mensagem..." required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </div>
+</section>
+
+<a href="index.html" class="btn">⬅ Voltar ao Projeto</a>
+
+</div>
+
+</section>
+
+<footer>
+<p>
+👓 Vision Safe Interlock © 2026
+<br>
+Segurança Inteligente para Ambientes Industriais
+</p>
+
+</footer>
+</body>
+</html>
